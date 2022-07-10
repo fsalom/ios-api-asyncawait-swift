@@ -1,11 +1,3 @@
-//
-//  AuthManager.swift
-//  Template
-//
-//  Created by Fernando Salom on 21/12/21.
-//  Copyright © 2021 Rudo. All rights reserved.
-//
-
 import Foundation
 
 enum AuthError: Error {
@@ -69,18 +61,6 @@ actor AuthManager {
     func authenticate(with parameters: [String: Any]) async throws -> String {
         do {
             let token = try await Network.shared.load(endpoint: AuthEndpoint.login(parameters).endpoint, of: TokenDTO.self)
-            save(this: token)
-            return token.accessToken
-        } catch let error {
-            Log.thisError(error)
-            throw AuthError.badRequest
-        }
-    }
-
-    // MARK: - authenticate - social
-    func social(with parameters: [String: Any]) async throws -> String {
-        do {
-            let token = try await Network.shared.load(endpoint: AuthEndpoint.social(parameters).endpoint, of: TokenDTO.self)
             save(this: token)
             return token.accessToken
         } catch let error {

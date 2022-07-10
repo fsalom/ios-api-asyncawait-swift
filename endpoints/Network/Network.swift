@@ -1,11 +1,3 @@
-//
-//  Network.swift
-//  Template
-//
-//  Created by Fernando Salom on 21/12/21.
-//  Copyright © 2021 Rudo. All rights reserved.
-//
-
 import Foundation
 import UIKit
 
@@ -57,9 +49,12 @@ class Network {
                     _ = try await authManager.refreshToken()
                     return try await loadAuthorized(endpoint: endpoint, of: type, allowRetry: false)
                 } catch {
+                    /*
+                    // GO TO LOGIN
                     let login = Container.shared.loginBuilder().build()
                     let navigation = await UINavigationController(rootViewController: login)
                     changeRoot(to: navigation)
+                    */
                 }
             }
         }
@@ -101,9 +96,12 @@ class Network {
         } catch let error {
             Log.thisError(error)
             DispatchQueue.main.async {
-                let login = Container.shared.loginBuilder().build()
-                let navigation = UINavigationController(rootViewController: login)
-                changeRoot(to: navigation)
+              /*
+              // GO TO LOGIN
+              let login = Container.shared.loginBuilder().build()
+              let navigation = await UINavigationController(rootViewController: login)
+              changeRoot(to: navigation)
+              */
             }
         }
         return requestWithHeader

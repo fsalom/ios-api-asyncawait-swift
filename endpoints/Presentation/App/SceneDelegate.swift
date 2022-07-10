@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  endpoints
-//
-//  Created by Fernando Salom Carratala on 8/7/22.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {

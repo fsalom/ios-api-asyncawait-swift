@@ -1,11 +1,3 @@
-//
-//  TokenDTO.swift
-//  Template
-//
-//  Created by Joel Sifres Clemente on 28/9/21.
-//  Copyright © 2021 Rudo. All rights reserved.
-//
-
 import Foundation
 
 struct TokenDTO: Codable {

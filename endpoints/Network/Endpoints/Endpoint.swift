@@ -1,11 +1,3 @@
-//
-//  Endpoint.swift
-//  Template
-//
-//  Created by Fernando Salom Carratala on 23/12/21.
-//  Copyright © 2021 Rudo. All rights reserved.
-//
-
 import Foundation
 import UIKit
 
@@ -45,7 +37,6 @@ struct Endpoint {
     var images: [String: UIImage]
     var videos: [String: String]
     var request: URLRequest {
-        // swiftlint:disable all
         get {
             let url = getURL(path: self.path)
             var request = URLRequest(url: url)
@@ -90,7 +81,7 @@ struct Endpoint {
     
     // MARK: - get URL with BASE_URL
     func getURL(path: String) -> URL {
-        guard let url = URL(string: config.BASE_URL
+        guard let url = URL(string: Config.baseURL
         )?.appendingPathComponent(path) else {
             Log.this(path, type: .error)
             fatalError()

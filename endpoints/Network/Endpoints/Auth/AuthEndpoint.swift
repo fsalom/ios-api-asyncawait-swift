@@ -1,11 +1,3 @@
-//
-//  Auth-APIv2.swift
-//  Template
-//
-//  Created by Fernando Salom on 23/12/21.
-//  Copyright © 2021 Rudo. All rights reserved.
-//
-
 import Foundation
 
 enum AuthEndpoint {

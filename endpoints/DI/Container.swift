@@ -5,7 +5,7 @@ class Container {
 }
 
 extension Container {
-    func loginBuilder() -> LoginBuilder {
-        return LoginBuilder()
+    func mainBuilder() -> MainBuilder {
+        return mainBuilder()
     }
 }

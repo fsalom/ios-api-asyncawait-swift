@@ -1,10 +1,3 @@
-//
-//  Log.swift
-//  test_ios-davidalhambra
-//
-//  Created by David García Alhambra on 14/5/21.
-//
-
 import Foundation
 
 enum LogType {
@@ -15,7 +8,6 @@ enum LogType {
   case verbose
 }
 
-// swiftlint:disable all
 struct Log {
   static func time() -> String {
     let date = Date()

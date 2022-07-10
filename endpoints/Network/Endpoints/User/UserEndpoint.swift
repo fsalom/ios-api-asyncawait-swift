@@ -1,11 +1,3 @@
-//
-//  UserEndpoint.swift
-//  Template
-//
-//  Created by Fernando Salom Carratala on 26/12/21.
-//  Copyright © 2021 Rudo. All rights reserved.
-//
-
 import Foundation
 
 enum UserEndpoint {
